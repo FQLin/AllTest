@@ -9,4 +9,10 @@
     <PackageReference Include="sqlSugarCore" Version="4.9.9.7" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Update="app.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
 </Project>
