@@ -12,7 +12,7 @@ namespace TestDemo
 {
     class Program
     {
-        static SqlSugarClient _db;
+        public static SqlSugarClient _db;
 
         static List<Guid> extendIds = new List<Guid>();
 
@@ -31,6 +31,14 @@ namespace TestDemo
                 InitKeyType = InitKeyType.Attribute
             });
 
+            UpdateDemo.Update1();
+
+            Console.ReadKey();
+        }
+
+
+        static void WithT()
+        {
             //插入数据
             List<CarTypeExtend> carTypeExtends = new List<CarTypeExtend>();
             for (int i = 0; i < 10; i++)
@@ -57,8 +65,6 @@ namespace TestDemo
             //WithArray();
 
             WithDictionary();
-
-            Console.ReadKey();
         }
 
 
