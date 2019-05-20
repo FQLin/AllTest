@@ -36,12 +36,16 @@ namespace TestDemo
                 Console.Write($"{sql}\r\n{_db.Utilities.SerializeObject(pars.ToDictionary(it => it.ParameterName, it => it.Value))}\r\n");
             };
 
-            UpdateDemo.Update3();
+            Guid storeId = Guid.NewGuid();
+            DateTime sd = DateTime.Now, ed = DateTime.Now.AddDays(3);
+
+            EntityMappingDemo.Test2(storeId, sd, ed);
 
             Console.ReadKey();
         }
 
 
+        #region Parame
         static void WithT()
         {
             //插入数据
@@ -117,7 +121,7 @@ namespace TestDemo
 
         static void WithDictionary()
         {
-            Dictionary<string,Object> parameters=new Dictionary<string, Object>();
+            Dictionary<string, Object> parameters = new Dictionary<string, Object>();
             StringBuilder sql =
                 new StringBuilder(
                     $"update {nameof(CarTypeExtend)} set {nameof(CarTypeExtend.Indexing)} = case {nameof(CarTypeExtend.ID)} ");
@@ -131,6 +135,7 @@ namespace TestDemo
                 $" end where {nameof(CarTypeExtend.CarType_ID)} = @{nameof(CarTypeExtend.CarType_ID)} ");
             parameters.Add($"@{nameof(CarTypeExtend.CarType_ID)}", default(Guid));
             _db.Ado.ExecuteCommand(sql.ToString(), parameters);
-        }
+        } 
+        #endregion
     }
 }
