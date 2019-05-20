@@ -31,7 +31,7 @@ namespace TestDemo
                 InitKeyType = InitKeyType.Attribute
             });
 
-            UpdateDemo.Update1();
+            UpdateDemo.Update2();
 
             Console.ReadKey();
         }
