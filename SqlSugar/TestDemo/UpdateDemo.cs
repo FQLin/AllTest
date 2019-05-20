@@ -22,10 +22,10 @@ namespace TestDemo
         {
             Program._db.Updateable<CarType>()
                 .UpdateColumns(c => new { c.State })
-                .ReSetValue(c => c.State == c.State ? true : false)
+                .ReSetValue(c => c.State == (c.State ? true : false))
                 //.Where(c => c.ID == id)
                 .ExecuteCommand();
-        } 
+        }
         #endregion
     }
 }
