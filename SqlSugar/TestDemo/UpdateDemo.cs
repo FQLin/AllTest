@@ -1,4 +1,5 @@
-﻿using TestDemo.Model;
+﻿using System;
+using TestDemo.Model;
 
 namespace TestDemo
 {
@@ -25,6 +26,15 @@ namespace TestDemo
                 .ReSetValue(c => c.State == (c.State ? true : false))
                 //.Where(c => c.ID == id)
                 .ExecuteCommand();
+        }
+
+
+        public static void Update3()
+        {
+            Program._db.Updateable<CarType>()
+            .UpdateColumns(it => new CarType { State = (it.State ? true : false) })
+            //.Where(c => c.ID == Guid.Empty)
+            .ExecuteCommand();
         }
         #endregion
     }

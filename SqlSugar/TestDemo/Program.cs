@@ -31,7 +31,12 @@ namespace TestDemo
                 InitKeyType = InitKeyType.Attribute
             });
 
-            UpdateDemo.Update2();
+            _db.Aop.OnLogExecuting = (sql, pars) =>
+            {
+                Console.Write($"{sql}\r\n{_db.Utilities.SerializeObject(pars.ToDictionary(it => it.ParameterName, it => it.Value))}\r\n");
+            };
+
+            UpdateDemo.Update3();
 
             Console.ReadKey();
         }
