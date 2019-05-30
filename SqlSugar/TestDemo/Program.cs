@@ -36,10 +36,7 @@ namespace TestDemo
                 Console.Write($"{sql}\r\n{_db.Utilities.SerializeObject(pars.ToDictionary(it => it.ParameterName, it => it.Value))}\r\n");
             };
 
-            Guid storeId = Guid.NewGuid();
-            DateTime sd = DateTime.Now, ed = DateTime.Now.AddDays(3);
-
-            EntityMappingDemo.Test2(storeId, sd, ed);
+            IEnumerbleContains.Test1();
 
             Console.ReadKey();
         }

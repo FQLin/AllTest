@@ -1,6 +1,5 @@
 ﻿{
   "ConnectionStrings": {
-    "DefaultConnection": "Data Source=10.1.2.8;Initial Catalog=YouZai;User ID=sa;Password=JICAISERVER;",
-    "DefaultConnection1": "Data Source=(localdb)\\ProjectsV13;Initial Catalog=SqlSugar;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False"
+    "DefaultConnection": "Data Source=(localdb)\\ProjectsV13;Initial Catalog=SqlSugar;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False"
   }
 }

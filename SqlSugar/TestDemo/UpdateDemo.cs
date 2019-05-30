@@ -29,13 +29,13 @@ namespace TestDemo
         }
 
 
-        public static void Update3()
-        {
-            Program._db.Updateable<CarType>()
-            .UpdateColumns(it => new CarType { State = (it.State ? true : false) })
-            //.Where(c => c.ID == Guid.Empty)
-            .ExecuteCommand();
-        }
+        //public static void Update3()
+        //{
+        //    Program._db.Updateable<CarType>()
+        //    .UpdateColumns(it => new CarType { State = (it.State ? true : false) })
+        //    //.Where(c => c.ID == Guid.Empty)
+        //    .ExecuteCommand();
+        //}
         #endregion
     }
 }
